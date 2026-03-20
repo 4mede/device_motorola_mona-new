@@ -11,9 +11,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/motorola/mona/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/miku/build/product/miku_product.mk)
 
-PRODUCT_NAME := lineage_mona
+MIKU_GAPPS := true
+MIKU_MASTER := briefingstunna
+TARGET_NO_APERTURE := true
+
+PRODUCT_NAME := miku_mona
 PRODUCT_DEVICE := mona
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
